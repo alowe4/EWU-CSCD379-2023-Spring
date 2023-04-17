@@ -1,3 +1,5 @@
+import { Letter, LetterStatus } from "./letter"
+
 export abstract class WordsService {
   static getRandomWord(): string {
     return this.#words[Math.floor(Math.random() * this.#words.length)]
@@ -7,8 +9,34 @@ export abstract class WordsService {
     return this.#words.includes(word)
   }
 
-  static validWords(): Array<string> {
+  static validWords(GuessedWord: Word): Array<string> {
     //Todo
+    for(wordString in this.#words){
+      if(isWrong){
+        break
+      }
+      cIndex = 0
+      for(char c in wordString){
+        LIndex = 0
+        for(Letter L in GuessedWord){
+          if(L.value != c){
+            continue
+          }
+          if(L.LetterStatus == LetterStatus.Wrong){
+            //remove word from list
+            this.#words.remove
+            isWrong = true
+            break
+          }
+          if(L.LetterStatus == LetterStatus.Misplaced){
+            if(LIndex == cIndex){
+              isWrong = true
+              break
+            }
+          }
+        }
+      }
+    }
     return new Array<string>()
   }
 

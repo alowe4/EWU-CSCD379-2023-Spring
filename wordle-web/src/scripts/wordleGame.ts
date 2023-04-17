@@ -25,5 +25,6 @@ export class WordleGame {
     const word = new Word(guess)
     this.guesses.push(word)
     word.check(this.secretWord)
+    WordsService.validWords(word)
   }
 }
