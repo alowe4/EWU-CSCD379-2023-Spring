@@ -1,11 +1,11 @@
 # wordle-web
 
 This template should help get you started developing with Vue 3 in Vite.
-
 # Extra Credit - ways to make our wordle game unique
 1) Theme - Specify a Theme as an Optional Hint 
 2) Leaderboard - whoever takes the least number of guesses gets more points 
 3) Timer - the amount of time spent will take points away 
+
 
 ## Recommended IDE Setup
 
